@@ -1,0 +1,22 @@
+{
+  "name": "hello-world-app",
+  "version": "1.0.0",
+  "description": "It's a Hello World app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbuck/hello-world-app.git"
+  },
+  "author": "Jon Buckley <jon@jbuckley.ca>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jbuck/hello-world-app/issues"
+  },
+  "homepage": "https://github.com/jbuck/hello-world-app#readme",
+  "dependencies": {
+    "fastify": "^3.27.0"
+  }
+}
