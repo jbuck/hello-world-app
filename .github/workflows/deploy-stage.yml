@@ -1,0 +1,24 @@
+name: Deploy hello-stage
+on:
+  push:
+    branches:
+    - 'main'
+  workflow_dispatch: {}
+
+jobs:
+  run:
+    name: Deploy hello-stage
+    permissions:
+      id-token: write
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+
+    - run: docker build . --tag hello_world:latest
+
+    - uses: mozilla-it/gha-deploy-test/projects/hellp-world/actions/push-deploy-stage@master
+      with:
+        image: hello_world:latest
+        image_tag: stage
